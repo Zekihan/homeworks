@@ -1,0 +1,800 @@
+------------------------------------
+run 1
+mixed: 0.000539
+mixed optimized: 0.429338
+poly: 0.000381
+poly optimized: 0.973619
+horner: 0.000375
+horner optimized: 0.000388
+------------------------------------
+run 2
+mixed: 0.000387
+mixed optimized: 0.428146
+poly: 0.000371
+poly optimized: 0.983300
+horner: 0.000371
+horner optimized: 0.000371
+------------------------------------
+run 3
+mixed: 0.000795
+mixed optimized: 0.425645
+poly: 0.000406
+poly optimized: 0.976841
+horner: 0.000385
+horner optimized: 0.000371
+------------------------------------
+run 4
+mixed: 0.000652
+mixed optimized: 0.424714
+poly: 0.000371
+poly optimized: 0.973484
+horner: 0.000371
+horner optimized: 0.000389
+------------------------------------
+run 5
+mixed: 0.000379
+mixed optimized: 0.423691
+poly: 0.000375
+poly optimized: 0.976610
+horner: 0.000371
+horner optimized: 0.000381
+------------------------------------
+run 6
+mixed: 0.000425
+mixed optimized: 0.427115
+poly: 0.000371
+poly optimized: 0.975930
+horner: 0.000371
+horner optimized: 0.000372
+------------------------------------
+run 7
+mixed: 0.000493
+mixed optimized: 0.426316
+poly: 0.000372
+poly optimized: 0.974872
+horner: 0.000378
+horner optimized: 0.000386
+------------------------------------
+run 8
+mixed: 0.000776
+mixed optimized: 0.432477
+poly: 0.000379
+poly optimized: 0.973722
+horner: 0.000371
+horner optimized: 0.000374
+------------------------------------
+run 9
+mixed: 0.000784
+mixed optimized: 0.427600
+poly: 0.000371
+poly optimized: 0.972512
+horner: 0.000381
+horner optimized: 0.000374
+------------------------------------
+run 10
+mixed: 0.000418
+mixed optimized: 0.423529
+poly: 0.000376
+poly optimized: 0.975295
+horner: 0.000375
+horner optimized: 0.000371
+------------------------------------
+run 11
+mixed: 0.000475
+mixed optimized: 0.426617
+poly: 0.000384
+poly optimized: 0.972177
+horner: 0.000379
+horner optimized: 0.000372
+------------------------------------
+run 12
+mixed: 0.000372
+mixed optimized: 0.441780
+poly: 0.000371
+poly optimized: 0.978811
+horner: 0.000375
+horner optimized: 0.000383
+------------------------------------
+run 13
+mixed: 0.000436
+mixed optimized: 0.430757
+poly: 0.000377
+poly optimized: 0.979211
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 14
+mixed: 0.000842
+mixed optimized: 0.424901
+poly: 0.000371
+poly optimized: 0.972254
+horner: 0.000374
+horner optimized: 0.000378
+------------------------------------
+run 15
+mixed: 0.000779
+mixed optimized: 0.432292
+poly: 0.000372
+poly optimized: 0.977864
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 16
+mixed: 0.000766
+mixed optimized: 0.426402
+poly: 0.000378
+poly optimized: 0.978735
+horner: 0.000371
+horner optimized: 0.000371
+------------------------------------
+run 17
+mixed: 0.000468
+mixed optimized: 0.427978
+poly: 0.000372
+poly optimized: 0.977719
+horner: 0.000381
+horner optimized: 0.000371
+------------------------------------
+run 18
+mixed: 0.000504
+mixed optimized: 0.433822
+poly: 0.000371
+poly optimized: 0.973205
+horner: 0.000381
+horner optimized: 0.000392
+------------------------------------
+run 19
+mixed: 0.000780
+mixed optimized: 0.429735
+poly: 0.000371
+poly optimized: 0.974538
+horner: 0.000376
+horner optimized: 0.000378
+------------------------------------
+run 20
+mixed: 0.000546
+mixed optimized: 0.424452
+poly: 0.000378
+poly optimized: 0.985155
+horner: 0.000371
+horner optimized: 0.000374
+------------------------------------
+run 21
+mixed: 0.000814
+mixed optimized: 0.432050
+poly: 0.000371
+poly optimized: 0.977469
+horner: 0.000378
+horner optimized: 0.000390
+------------------------------------
+run 22
+mixed: 0.000466
+mixed optimized: 0.427624
+poly: 0.000375
+poly optimized: 0.973375
+horner: 0.000381
+horner optimized: 0.000371
+------------------------------------
+run 23
+mixed: 0.000780
+mixed optimized: 0.426427
+poly: 0.000392
+poly optimized: 0.971194
+horner: 0.000379
+horner optimized: 0.000399
+------------------------------------
+run 24
+mixed: 0.000458
+mixed optimized: 0.427768
+poly: 0.000372
+poly optimized: 0.979880
+horner: 0.000382
+horner optimized: 0.000390
+------------------------------------
+run 25
+mixed: 0.000763
+mixed optimized: 0.433538
+poly: 0.000379
+poly optimized: 0.973002
+horner: 0.000378
+horner optimized: 0.000374
+------------------------------------
+run 26
+mixed: 0.000421
+mixed optimized: 0.428780
+poly: 0.000376
+poly optimized: 0.991841
+horner: 0.000386
+horner optimized: 0.000371
+------------------------------------
+run 27
+mixed: 0.000417
+mixed optimized: 0.434383
+poly: 0.000379
+poly optimized: 0.980724
+horner: 0.000376
+horner optimized: 0.000371
+------------------------------------
+run 28
+mixed: 0.000464
+mixed optimized: 0.435062
+poly: 0.000374
+poly optimized: 0.978795
+horner: 0.000372
+horner optimized: 0.000372
+------------------------------------
+run 29
+mixed: 0.000494
+mixed optimized: 0.427130
+poly: 0.000392
+poly optimized: 0.978579
+horner: 0.000375
+horner optimized: 0.000379
+------------------------------------
+run 30
+mixed: 0.000423
+mixed optimized: 0.424942
+poly: 0.000375
+poly optimized: 0.975873
+horner: 0.000382
+horner optimized: 0.000371
+------------------------------------
+run 31
+mixed: 0.000862
+mixed optimized: 0.427792
+poly: 0.000371
+poly optimized: 0.981807
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 32
+mixed: 0.000420
+mixed optimized: 0.426549
+poly: 0.000378
+poly optimized: 0.972515
+horner: 0.000375
+horner optimized: 0.000371
+------------------------------------
+run 33
+mixed: 0.000476
+mixed optimized: 0.427934
+poly: 0.000375
+poly optimized: 0.975568
+horner: 0.000377
+horner optimized: 0.000374
+------------------------------------
+run 34
+mixed: 0.000962
+mixed optimized: 0.437876
+poly: 0.000371
+poly optimized: 0.983936
+horner: 0.000375
+horner optimized: 0.000383
+------------------------------------
+run 35
+mixed: 0.000469
+mixed optimized: 0.425273
+poly: 0.000371
+poly optimized: 0.976181
+horner: 0.000383
+horner optimized: 0.000379
+------------------------------------
+run 36
+mixed: 0.000487
+mixed optimized: 0.431177
+poly: 0.000371
+poly optimized: 0.978242
+horner: 0.000377
+horner optimized: 0.000374
+------------------------------------
+run 37
+mixed: 0.000493
+mixed optimized: 0.424850
+poly: 0.000381
+poly optimized: 0.977896
+horner: 0.000371
+horner optimized: 0.000374
+------------------------------------
+run 38
+mixed: 0.000793
+mixed optimized: 0.425630
+poly: 0.000376
+poly optimized: 0.993761
+horner: 0.000372
+horner optimized: 0.000376
+------------------------------------
+run 39
+mixed: 0.000442
+mixed optimized: 0.440949
+poly: 0.000375
+poly optimized: 0.973901
+horner: 0.000376
+horner optimized: 0.000374
+------------------------------------
+run 40
+mixed: 0.000392
+mixed optimized: 0.431046
+poly: 0.000374
+poly optimized: 0.976181
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 41
+mixed: 0.000763
+mixed optimized: 0.425468
+poly: 0.000372
+poly optimized: 0.972984
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 42
+mixed: 0.000410
+mixed optimized: 0.430983
+poly: 0.000371
+poly optimized: 0.987646
+horner: 0.000376
+horner optimized: 0.000390
+------------------------------------
+run 43
+mixed: 0.000467
+mixed optimized: 0.426155
+poly: 0.000382
+poly optimized: 0.986316
+horner: 0.000380
+horner optimized: 0.000382
+------------------------------------
+run 44
+mixed: 0.000800
+mixed optimized: 0.427292
+poly: 0.000384
+poly optimized: 0.971984
+horner: 0.000372
+horner optimized: 0.000374
+------------------------------------
+run 45
+mixed: 0.000474
+mixed optimized: 0.426066
+poly: 0.000376
+poly optimized: 0.979857
+horner: 0.000381
+horner optimized: 0.000373
+------------------------------------
+run 46
+mixed: 0.000798
+mixed optimized: 0.430710
+poly: 0.000381
+poly optimized: 0.975796
+horner: 0.000371
+horner optimized: 0.000373
+------------------------------------
+run 47
+mixed: 0.000570
+mixed optimized: 0.423927
+poly: 0.000442
+poly optimized: 0.980475
+horner: 0.000371
+horner optimized: 0.000374
+------------------------------------
+run 48
+mixed: 0.000905
+mixed optimized: 0.435929
+poly: 0.000377
+poly optimized: 0.990084
+horner: 0.000375
+horner optimized: 0.000371
+------------------------------------
+run 49
+mixed: 0.000519
+mixed optimized: 0.424814
+poly: 0.000375
+poly optimized: 0.979834
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 50
+mixed: 0.000808
+mixed optimized: 0.442301
+poly: 0.000397
+poly optimized: 0.982734
+horner: 0.000438
+horner optimized: 0.000403
+------------------------------------
+run 51
+mixed: 0.000431
+mixed optimized: 0.424285
+poly: 0.000376
+poly optimized: 0.971911
+horner: 0.000372
+horner optimized: 0.000371
+------------------------------------
+run 52
+mixed: 0.000752
+mixed optimized: 0.426900
+poly: 0.000376
+poly optimized: 0.974562
+horner: 0.000391
+horner optimized: 0.000380
+------------------------------------
+run 53
+mixed: 0.000406
+mixed optimized: 0.429281
+poly: 0.000371
+poly optimized: 0.979367
+horner: 0.000374
+horner optimized: 0.000444
+------------------------------------
+run 54
+mixed: 0.000779
+mixed optimized: 0.428184
+poly: 0.000430
+poly optimized: 0.973825
+horner: 0.000371
+horner optimized: 0.000371
+------------------------------------
+run 55
+mixed: 0.000472
+mixed optimized: 0.433149
+poly: 0.000371
+poly optimized: 0.971133
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 56
+mixed: 0.000826
+mixed optimized: 0.428096
+poly: 0.000376
+poly optimized: 0.978157
+horner: 0.000376
+horner optimized: 0.000405
+------------------------------------
+run 57
+mixed: 0.000479
+mixed optimized: 0.435048
+poly: 0.000375
+poly optimized: 0.974432
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 58
+mixed: 0.000785
+mixed optimized: 0.423943
+poly: 0.000371
+poly optimized: 0.972581
+horner: 0.000376
+horner optimized: 0.000371
+------------------------------------
+run 59
+mixed: 0.000379
+mixed optimized: 0.428181
+poly: 0.000372
+poly optimized: 0.977979
+horner: 0.000376
+horner optimized: 0.000403
+------------------------------------
+run 60
+mixed: 0.000505
+mixed optimized: 0.435054
+poly: 0.000380
+poly optimized: 0.982660
+horner: 0.000376
+horner optimized: 0.000374
+------------------------------------
+run 61
+mixed: 0.000393
+mixed optimized: 0.426210
+poly: 0.000376
+poly optimized: 0.971685
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 62
+mixed: 0.000780
+mixed optimized: 0.429048
+poly: 0.000372
+poly optimized: 0.978824
+horner: 0.000377
+horner optimized: 0.000375
+------------------------------------
+run 63
+mixed: 0.000723
+mixed optimized: 0.428201
+poly: 0.000371
+poly optimized: 0.971456
+horner: 0.000375
+horner optimized: 0.000396
+------------------------------------
+run 64
+mixed: 0.000792
+mixed optimized: 0.424605
+poly: 0.000372
+poly optimized: 0.973241
+horner: 0.000375
+horner optimized: 0.000371
+------------------------------------
+run 65
+mixed: 0.000586
+mixed optimized: 0.445410
+poly: 0.000371
+poly optimized: 0.979094
+horner: 0.000381
+horner optimized: 0.000371
+------------------------------------
+run 66
+mixed: 0.000820
+mixed optimized: 0.426687
+poly: 0.000372
+poly optimized: 0.975995
+horner: 0.000375
+horner optimized: 0.000384
+------------------------------------
+run 67
+mixed: 0.000507
+mixed optimized: 0.442657
+poly: 0.000375
+poly optimized: 0.972120
+horner: 0.000375
+horner optimized: 0.000371
+------------------------------------
+run 68
+mixed: 0.000820
+mixed optimized: 0.427324
+poly: 0.000403
+poly optimized: 0.978121
+horner: 0.000382
+horner optimized: 0.000371
+------------------------------------
+run 69
+mixed: 0.000815
+mixed optimized: 0.440577
+poly: 0.000375
+poly optimized: 0.977834
+horner: 0.000396
+horner optimized: 0.000371
+------------------------------------
+run 70
+mixed: 0.000853
+mixed optimized: 0.434554
+poly: 0.000378
+poly optimized: 0.976661
+horner: 0.000377
+horner optimized: 0.000371
+------------------------------------
+run 71
+mixed: 0.000410
+mixed optimized: 0.437053
+poly: 0.000371
+poly optimized: 0.981790
+horner: 0.000380
+horner optimized: 0.000371
+------------------------------------
+run 72
+mixed: 0.000373
+mixed optimized: 0.428482
+poly: 0.000395
+poly optimized: 0.975115
+horner: 0.000387
+horner optimized: 0.000375
+------------------------------------
+run 73
+mixed: 0.000409
+mixed optimized: 0.435680
+poly: 0.000423
+poly optimized: 0.977197
+horner: 0.000393
+horner optimized: 0.000376
+------------------------------------
+run 74
+mixed: 0.001012
+mixed optimized: 0.426415
+poly: 0.000372
+poly optimized: 0.972502
+horner: 0.000399
+horner optimized: 0.000372
+------------------------------------
+run 75
+mixed: 0.000491
+mixed optimized: 0.425634
+poly: 0.000388
+poly optimized: 0.978856
+horner: 0.000376
+horner optimized: 0.000380
+------------------------------------
+run 76
+mixed: 0.000760
+mixed optimized: 0.428803
+poly: 0.000375
+poly optimized: 0.978274
+horner: 0.000372
+horner optimized: 0.000372
+------------------------------------
+run 77
+mixed: 0.000773
+mixed optimized: 0.428710
+poly: 0.000377
+poly optimized: 0.974859
+horner: 0.000381
+horner optimized: 0.000389
+------------------------------------
+run 78
+mixed: 0.000536
+mixed optimized: 0.426341
+poly: 0.000371
+poly optimized: 0.980038
+horner: 0.000371
+horner optimized: 0.000381
+------------------------------------
+run 79
+mixed: 0.000785
+mixed optimized: 0.427214
+poly: 0.000378
+poly optimized: 0.971658
+horner: 0.000371
+horner optimized: 0.000383
+------------------------------------
+run 80
+mixed: 0.000824
+mixed optimized: 0.426031
+poly: 0.000375
+poly optimized: 0.972033
+horner: 0.000374
+horner optimized: 0.000371
+------------------------------------
+run 81
+mixed: 0.000485
+mixed optimized: 0.428394
+poly: 0.000374
+poly optimized: 0.976275
+horner: 0.000371
+horner optimized: 0.000378
+------------------------------------
+run 82
+mixed: 0.000772
+mixed optimized: 0.429283
+poly: 0.000371
+poly optimized: 0.974556
+horner: 0.000371
+horner optimized: 0.000376
+------------------------------------
+run 83
+mixed: 0.000609
+mixed optimized: 0.427695
+poly: 0.000375
+poly optimized: 0.973377
+horner: 0.000375
+horner optimized: 0.000372
+------------------------------------
+run 84
+mixed: 0.000448
+mixed optimized: 0.425726
+poly: 0.000375
+poly optimized: 0.979679
+horner: 0.000376
+horner optimized: 0.000386
+------------------------------------
+run 85
+mixed: 0.000538
+mixed optimized: 0.434644
+poly: 0.000371
+poly optimized: 0.979339
+horner: 0.000371
+horner optimized: 0.000375
+------------------------------------
+run 86
+mixed: 0.000485
+mixed optimized: 0.430516
+poly: 0.000376
+poly optimized: 0.980079
+horner: 0.000371
+horner optimized: 0.000372
+------------------------------------
+run 87
+mixed: 0.000789
+mixed optimized: 0.429216
+poly: 0.000378
+poly optimized: 0.970875
+horner: 0.000375
+horner optimized: 0.000371
+------------------------------------
+run 88
+mixed: 0.000480
+mixed optimized: 0.426846
+poly: 0.000374
+poly optimized: 0.978916
+horner: 0.000382
+horner optimized: 0.000371
+------------------------------------
+run 89
+mixed: 0.000514
+mixed optimized: 0.453373
+poly: 0.000420
+poly optimized: 0.986017
+horner: 0.000374
+horner optimized: 0.000376
+------------------------------------
+run 90
+mixed: 0.000799
+mixed optimized: 0.424408
+poly: 0.000432
+poly optimized: 0.978780
+horner: 0.000432
+horner optimized: 0.000429
+------------------------------------
+run 91
+mixed: 0.000812
+mixed optimized: 0.428874
+poly: 0.000448
+poly optimized: 0.974950
+horner: 0.000382
+horner optimized: 0.000395
+------------------------------------
+run 92
+mixed: 0.000782
+mixed optimized: 0.429536
+poly: 0.000444
+poly optimized: 0.977851
+horner: 0.000371
+horner optimized: 0.000376
+------------------------------------
+run 93
+mixed: 0.000450
+mixed optimized: 0.427613
+poly: 0.000371
+poly optimized: 0.978227
+horner: 0.000378
+horner optimized: 0.000371
+------------------------------------
+run 94
+mixed: 0.000784
+mixed optimized: 0.435630
+poly: 0.000395
+poly optimized: 0.981478
+horner: 0.000372
+horner optimized: 0.000375
+------------------------------------
+run 95
+mixed: 0.000553
+mixed optimized: 0.424827
+poly: 0.000375
+poly optimized: 0.983499
+horner: 0.000511
+horner optimized: 0.000481
+------------------------------------
+run 96
+mixed: 0.000599
+mixed optimized: 0.427962
+poly: 0.000371
+poly optimized: 0.974078
+horner: 0.000372
+horner optimized: 0.000377
+------------------------------------
+run 97
+mixed: 0.000467
+mixed optimized: 0.436441
+poly: 0.000374
+poly optimized: 0.994020
+horner: 0.000375
+horner optimized: 0.000384
+------------------------------------
+run 98
+mixed: 0.000487
+mixed optimized: 0.428860
+poly: 0.000388
+poly optimized: 0.985534
+horner: 0.000371
+horner optimized: 0.000371
+------------------------------------
+run 99
+mixed: 0.000828
+mixed optimized: 0.434413
+poly: 0.000376
+poly optimized: 0.975293
+horner: 0.000376
+horner optimized: 0.000371
+------------------------------------
+run 100
+mixed: 0.000494
+mixed optimized: 0.431685
+poly: 0.000377
+poly optimized: 0.986532
+horner: 0.000381
+horner optimized: 0.000371

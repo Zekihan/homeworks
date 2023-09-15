@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in trial version of GeNIe, which can be used for evaluation purposes only -->
+<smile version="1.0" id="Network3" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="A">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.299326 0.700674</probabilities>
+		</cpt>
+		<cpt id="B">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.599992 0.400008</probabilities>
+		</cpt>
+		<cpt id="D">
+			<state id="T" />
+			<state id="F" />
+			<parents>A B</parents>
+			<probabilities>0.4988140840051668 0.5011859159948332 0.1009956731652717 0.8990043268347283 0.2006094427951587 0.7993905572048413 0.2022690784544579 0.7977309215455421</probabilities>
+		</cpt>
+		<cpt id="G">
+			<state id="T" />
+			<state id="F" />
+			<parents>D</parents>
+			<probabilities>0.8992661994404823 0.1007338005595177 0.5004984873714332 0.4995015126285668</probabilities>
+		</cpt>
+		<cpt id="C">
+			<state id="T" />
+			<state id="F" />
+			<parents>A</parents>
+			<probabilities>0.8011432351349365 0.1988567648650635 0.4006256832706794 0.5993743167293206</probabilities>
+		</cpt>
+		<cpt id="E">
+			<state id="T" />
+			<state id="F" />
+			<parents>C</parents>
+			<probabilities>0.699892989773511 0.300107010226489 0.4003157528118476 0.5996842471881524</probabilities>
+		</cpt>
+		<cpt id="F">
+			<state id="T" />
+			<state id="F" />
+			<parents>C</parents>
+			<probabilities>0.8004749179172006 0.1995250820827994 0.5991107199539509 0.4008892800460491</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 3.0.5905.2 EVALUATION" name="EventProbability">
+			<node id="A">
+				<name>A</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>319 161 353 182</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+			<node id="B">
+				<name>B</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>319 227 353 248</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+			<node id="D">
+				<name>D</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>485 186 519 207</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+			<node id="G">
+				<name>G</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>639 186 673 207</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+			<node id="C">
+				<name>C</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>485 107 519 128</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+			<node id="E">
+				<name>E</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>639 31 673 52</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+			<node id="F">
+				<name>F</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>639 104 673 125</position>
+				<barchart active="true" width="128" height="54" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

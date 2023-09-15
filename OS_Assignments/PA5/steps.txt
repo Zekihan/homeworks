@@ -1,0 +1,172 @@
+use: "sudo su" to become super user
+
+1) Before starting to compile you need to install a few packages. Type the following commands in your terminal:
+
+sudo apt-get install gcc
+sudo apt-get install libncurses5-dev
+sudo apt-get install bison
+sudo apt-get install flex
+sudo apt-get install libssl-dev
+sudo apt-get install libelf-dev
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get make
+
+2) check your current kernel version
+
+uname -r (mine was 5.0.0-37-generic)
+
+3) download one of the latest kernel code version
+
+wget https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.4.3.tar.xz
+
+tar -xvf Desktop/linux-5.4.3.tar.xz -C /usr/src
+
+4) Change your directory to new kernel code
+
+cd /usr/src/linux-5.4.3/
+
+5) Make directory for system call function
+
+mkdir elapsed
+
+6) Create a "elapsed.c" file and write your code
+
+gedit elapsed/elapsed.c
+
+#include<linux/kernel.h>
+
+#include <linux/syscalls.h>
+
+#include <linux/export.h>
+#include <linux/mm.h>
+#include <linux/errno.h>
+#include <linux/file.h>
+#include <linux/highuid.h>
+#include <linux/fs.h>
+#include <linux/namei.h>
+#include <linux/security.h>
+#include <linux/cred.h>
+#include <linux/pagemap.h>
+#include <linux/compat.h>
+
+#include <linux/uaccess.h>
+#include <asm/unistd.h>
+
+SYSCALL_DEFINE1(elapsed, int, pid)
+{	
+	//your code here
+	return 0;
+}
+
+7) Create a “Makefile” in the elapsed directory
+
+gedit elapsed/Makefile
+
+#then write the code below inside Makefile
+
+obj-y := hello.o
+
+8) Open "Makefile"
+
+gedit Makefile
+
+9) search for "core-y" in the document and find the line as the second instance of your search:
+
+core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/
+
+10) Add ‘elapsed/’ to the end of this line:
+
+core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ elapsed/
+
+11) Add the new system call to the system call table:
+If you are on a 32-bit system you’ll need to change ‘syscall_32.tbl’. For 64-bit, change ‘syscall_64.tbl’.
+
+gedit arch/x86/entry/syscalls/syscall_64.tbl
+
+12) Add the line below. Beware, the first number should be +1 based on the EOF.
+
+335	common	elapsed			__x64_sys_elapsed
+
+Example:
+
+333	...	...			...
+334	...	...			...
+335	common	elapsed			__x64_sys_elapsed
+
+13) Go to the linux-4.17.4/ directory and type the following commands
+
+gedit include/linux/syscalls.h
+
+14) Add the following line to the end of the document before the #endif statement
+
+asmlinkage long sys_elapsed(int);
+
+15) Configure your kernel by using the following command in your linux-5.4.3/ directory
+
+sudo make menuconfig
+
+IMPORTANT NORE: while entering this command, you might want to maximize your terminal screen. 
+Otherwise, you might get and error and a pop-up screen will not appear.
+
+Once the above command is used to configure the Linux kernel, you will get a pop up window with the list of 
+menus and you can select the items for the new configuration. If your unfamiliar with the configuration just 
+check for the file systems menu and check whether “ext4” is chosen or not, if not select it and save the configuration.
+
+16) Now to compile the kernel you can use the make command:
+
+sudo make
+
+The compilation took 3-4 hours for me on VM. As an alternative you can take advantage of the multiple cores on your computer, by simply typing
+
+sudo make -jn
+
+the  'n' letter in "-jn" option stands for the number of cores you want to dedicate for compilation. However, we don't quite recommend it on VM
+users. Or dedicate less amount of cores than you have given to your VM.
+
+Example:
+
+sudo make -j 4
+
+17) To install/update kernel,type the given command below.
+
+sudo make modules_install -j 4
+sudo make install -j 4
+
+18) The command will create some files under "/boot/" directory and it will automatically make a entry in your grub.cfg. 
+	To check whether it made correct entry, check the files under /boot/ directory . If you have followed the steps without 
+	any error you will find the following files in it in addition to others.
+
+- System.map-5.4.3
+- vmlinuz-5.4.3
+- initrd.img-5.4.3
+- config-5.4.3
+
+19) Finally run the following command to reboot your computer:
+
+
+shutdown -r now
+
+20) After you computer has restarted, run the following command to check if your kernel has been updated/installed
+
+uname -r
+
+21) Write the C code given below to check if our system call function is working
+
+#include <stdio.h>
+#include <linux/kernel.h>
+#include <sys/syscall.h>
+#include <unistd.h>
+int main()
+{	
+	int pid = 1234;
+	long int elapsedCheck = syscall(335, pid);
+	printf("System call sys_elapsed returned %ld\n", elapsedCheck);
+	return 0;
+}
+
+22) To check the message of your kernel run the following command given below.
+
+dmesg
+
+

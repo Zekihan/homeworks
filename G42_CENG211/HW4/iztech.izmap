@@ -1,0 +1,33 @@
+1 [Building, Department, Computer Engineering]
+2 [Landscape, Historical Ruin, Roman Bath]
+3 [Building, Facility, Gym]
+4 [Building, Facility, Pool]
+5 [Building, Department, Mechanical Engineering]
+6 [Building, Department, Food Engineering]
+7 [Landscape, Waterfall, The IZTECH Waterfall I]
+8 [Landscape, Waterfall, The IZTECH Waterfall II]
+9 [Building, Department, Molecular Biology and Genetics]
+10 [Building, Administrative, Student Affairs]
+11 [Building, Administrative, Rectorate Building]
+12 [Landscape, Beach, Gulbahce Beach]
+13 [Building, Cafeteria, IZTECH Cafeteria]
+14 [Building, Cafeteria, IZTECH Usta]
+
+
+1 <--> 7
+1 <--> 11
+14 <--> 1
+2 <--> 9
+5 <--> 11
+13 <--> 14
+1 <--> 3
+8 <--> 12
+6 <--> 3
+4 <--> 2
+10 <--> 11
+5 <--> 8
+9 <--> 14
+7 <--> 11
+3 <--> 14
+11 <--> 7
+

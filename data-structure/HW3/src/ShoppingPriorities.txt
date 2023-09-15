@@ -1,0 +1,5 @@
+bread,6
+apples,4
+eggs,4
+chocolate,2
+milk,2

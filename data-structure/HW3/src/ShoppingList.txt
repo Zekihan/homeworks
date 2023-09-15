@@ -1,0 +1,6 @@
+milk,3
+fish,1
+apples,4
+milk,3
+chocolate,11
+bread,2

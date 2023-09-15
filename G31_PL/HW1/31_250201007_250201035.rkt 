@@ -1,0 +1,141 @@
+#lang racket
+;input
+(define input '(("Sweden" (("Switzerland" 12) ("Norway" 10) ("Ireland" 8) ("Netherlands" 7) ("Belarus" 6) ("Poland" 5) ("Greece" 4) ("Malta" 3) ("Montenegro" 2) ("Azerbaijan" 1)))
+("Portugal" (("Malta" 12) ("Finland" 10) ("San Marino" 8) ("Andorra" 7) ("Turkey" 6) ("Cyprus" 5) ("Netherlands" 4) ("Latvia" 3) ("Croatia" 2) ("Czechia" 1)))
+("Belarus" (("Poland" 12) ("Portugal" 10) ("Turkey" 8) ("Croatia" 7) ("Estonia" 6) ("Sweden" 5) ("Liechtenstein" 4) ("Bulgaria" 3) ("San Marino" 2) ("Italy" 1)))
+("San Marino" (("Sweden" 12) ("Germany" 10) ("Slovenia" 8) ("Serbia" 7) ("Moldova" 6) ("Iceland" 5) ("Switzerland" 4) ("Italy" 3) ("Poland" 2) ("Greece" 1)))
+("Serbia" (("Poland" 12) ("Azerbaijan" 10) ("Malta" 8) ("Spain" 7) ("Sweden" 6) ("Liechtenstein" 5) ("Georgia" 4) ("Kazakhstan" 3) ("Bulgaria" 2) ("Italy" 1)))
+("Georgia" (("Greece" 12) ("Poland" 10) ("Croatia" 8) ("Czechia" 7) ("Hungary" 6) ("Belgium" 5) ("Ukraine" 4) ("Austria" 3) ("Bosnia" 2) ("Monaco" 1)))
+("Montenegro" (("United Kingdom" 12) ("Macedonia" 10) ("Switzerland" 8) ("Estonia" 7) ("Latvia" 6) ("Germany" 5) ("Austria" 4) ("Serbia" 3) ("San Marino" 2) ("Belgium" 1)))
+("Switzerland" (("San Marino" 12) ("Czechia" 10) ("Luxembourg" 8) ("France" 7) ("Ireland" 6) ("Italy" 5) ("Slovakia" 4) ("Cyprus" 3) ("Montenegro" 2) ("Liechtenstein" 1)))
+("Belgium" (("Switzerland" 12) ("Macedonia" 10) ("Russia" 8) ("Latvia" 7) ("Austria" 6) ("Germany" 5) ("Italy" 4) ("Albania" 3) ("Armenia" 2) ("Belarus" 1)))
+("Azerbaijan" (("Armenia" 12) ("Hungary" 10) ("Turkey" 8) ("Norway" 7) ("Estonia" 6) ("Slovenia" 5) ("Georgia" 4) ("Greece" 3) ("Sweden" 2) ("Austria" 1)))
+("Netherlands" (("Ireland" 12) ("Russia" 10) ("Belarus" 8) ("Armenia" 7) ("Macedonia" 6) ("Switzerland" 5) ("Bulgaria" 4) ("Sweden" 3) ("Andorra" 2) ("Serbia" 1)))
+("Kosovo" (("Cyprus" 12) ("Monaco" 10) ("Italy" 8) ("Estonia" 7) ("Ireland" 6) ("Denmark" 5) ("Lithuania" 4) ("Norway" 3) ("Iceland" 2) ("Armenia" 1)))
+("Croatia" (("San Marino" 12) ("Luxembourg" 10) ("Finland" 8) ("United Kingdom" 7) ("Estonia" 6) ("Moldova" 5) ("Romania" 4) ("Monaco" 3) ("Georgia" 2) ("Austria" 1)))
+("Malta" (("Ireland" 12) ("Italy" 10) ("Serbia" 8) ("Spain" 7) ("Sweden" 6) ("Montenegro" 5) ("Kazakhstan" 4) ("Poland" 3) ("Austria" 2) ("Macedonia" 1)))
+("Iceland" (("France" 12) ("Slovenia" 10) ("Austria" 8) ("Slovakia" 7) ("Latvia" 6) ("Liechtenstein" 5) ("Turkey" 4) ("Greece" 3) ("Poland" 2) ("Monaco" 1)))
+("Italy" (("Lithuania" 12) ("Iceland" 10) ("Romania" 8) ("Moldova" 7) ("Denmark" 6) ("Cyprus" 5) ("France" 4) ("Azerbaijan" 3) ("Bosnia" 2) ("United Kingdom" 1)))
+("Andorra" (("Romania" 12) ("Iceland" 10) ("Switzerland" 8) ("Ukraine" 7) ("San Marino" 6) ("Netherlands" 5) ("Bosnia" 4) ("Croatia" 3) ("Poland" 2) ("Portugal" 1)))
+("Latvia" (("Malta" 12) ("Monaco" 10) ("Kazakhstan" 8) ("Poland" 7) ("Lithuania" 6) ("Estonia" 5) ("Croatia" 4) ("Sweden" 3) ("Slovenia" 2) ("Belgium" 1)))
+("Spain" (("Liechtenstein" 12) ("Austria" 10) ("Sweden" 8) ("Kosovo" 7) ("Ukraine" 6) ("Slovakia" 5) ("Ireland" 4) ("Germany" 3) ("Serbia" 2) ("Netherlands" 1)))
+("Austria" (("Lithuania" 12) ("Slovakia" 10) ("Luxembourg" 8) ("Greece" 7) ("Belgium" 6) ("Ukraine" 5) ("Russia" 4) ("Kosovo" 3) ("Hungary" 2) ("Georgia" 1)))
+("Hungary" (("Italy" 12) ("Poland" 10) ("Azerbaijan" 8) ("Portugal" 7) ("Belgium" 6) ("Serbia" 5) ("Ukraine" 4) ("Malta" 3) ("Georgia" 2) ("Russia" 1)))
+("Germany" (("Austria" 12) ("Belgium" 10) ("Italy" 8) ("Sweden" 7) ("Ireland" 6) ("Greece" 5) ("France" 4) ("Denmark" 3) ("United Kingdom" 2) ("Andorra" 1)))
+("Macedonia" (("Iceland" 12) ("Bulgaria" 10) ("United Kingdom" 8) ("Belarus" 7) ("Serbia" 6) ("Azerbaijan" 5) ("Finland" 4) ("Poland" 3) ("Spain" 2) ("Montenegro" 1)))
+("Romania" (("Norway" 12) ("Lithuania" 10) ("Liechtenstein" 8) ("Belgium" 7) ("Kosovo" 6) ("Croatia" 5) ("Bosnia" 4) ("Montenegro" 3) ("Moldova" 2) ("Hungary" 1)))
+("Luxembourg" (("France" 12) ("Slovakia" 10) ("Bosnia" 8) ("Andorra" 7) ("Netherlands" 6) ("Monaco" 5) ("Lithuania" 4) ("Liechtenstein" 3) ("San Marino" 2) ("Iceland" 1)))
+("France" (("Finland" 12) ("Kosovo" 10) ("Ukraine" 8) ("Austria" 7) ("Denmark" 6) ("Turkey" 5) ("Germany" 4) ("Monaco" 3) ("Macedonia" 2) ("Andorra" 1)))
+("Estonia" (("Poland" 12) ("Italy" 10) ("Ireland" 8) ("Germany" 7) ("Luxembourg" 6) ("Denmark" 5) ("Kazakhstan" 4) ("Russia" 3) ("Lithuania" 2) ("Slovakia" 1)))
+("Liechtenstein" (("Moldova" 12) ("Kosovo" 10) ("United Kingdom" 8) ("Bosnia" 7) ("Kazakhstan" 6) ("Malta" 5) ("Portugal" 4) ("Slovakia" 3) ("Sweden" 2) ("Netherlands" 1)))
+("Kazakhstan" (("Montenegro" 12) ("Albania" 10) ("Norway" 8) ("Finland" 7) ("Kosovo" 6) ("Armenia" 5) ("Turkey" 4) ("Belgium" 3) ("Sweden" 2) ("Italy" 1)))
+("Bulgaria" (("Sweden" 12) ("Czechia" 10) ("Spain" 8) ("Liechtenstein" 7) ("Austria" 6) ("Greece" 5) ("Albania" 4) ("Lithuania" 3) ("Portugal" 2) ("Croatia" 1)))
+("Armenia" (("Georgia" 12) ("Netherlands" 10) ("Norway" 8) ("Hungary" 7) ("Kazakhstan" 6) ("Azerbaijan" 5) ("Austria" 4) ("Moldova" 3) ("Germany" 2) ("France" 1)))
+("Albania" (("Belgium" 12) ("Poland" 10) ("Bulgaria" 8) ("Norway" 7) ("Azerbaijan" 6) ("Netherlands" 5) ("Kazakhstan" 4) ("Finland" 3) ("Liechtenstein" 2) ("Austria" 1)))
+("Russia" (("Turkey" 12) ("Serbia" 10) ("Cyprus" 8) ("Italy" 7) ("Georgia" 6) ("Montenegro" 5) ("Estonia" 4) ("Monaco" 3) ("Greece" 2) ("Kosovo" 1)))
+("Norway" (("Finland" 12) ("Denmark" 10) ("Poland" 8) ("Romania" 7) ("Latvia" 6) ("Slovenia" 5) ("France" 4) ("Malta" 3) ("Lithuania" 2) ("Austria" 1)))
+("Ukraine" (("Monaco" 12) ("Andorra" 10) ("Croatia" 8) ("Luxembourg" 7) ("United Kingdom" 6) ("Greece" 5) ("Moldova" 4) ("Spain" 3) ("Albania" 2) ("Kosovo" 1)))
+("Cyprus" (("Netherlands" 12) ("Monaco" 10) ("Georgia" 8) ("San Marino" 7) ("Turkey" 6) ("Malta" 5) ("Czechia" 4) ("Italy" 3) ("Serbia" 2) ("Armenia" 1)))
+("Monaco" (("Kosovo" 12) ("San Marino" 10) ("Bosnia" 8) ("Bulgaria" 7) ("Croatia" 6) ("Cyprus" 5) ("Lithuania" 4) ("Netherlands" 3) ("Luxembourg" 2) ("Serbia" 1)))
+("Bosnia" (("Malta" 12) ("Switzerland" 10) ("Ireland" 8) ("Albania" 7) ("Portugal" 6) ("Andorra" 5) ("Kazakhstan" 4) ("Bulgaria" 3) ("Greece" 2) ("Cyprus" 1)))
+("Poland" (("Romania" 12) ("Latvia" 10) ("Luxembourg" 8) ("Slovenia" 7) ("Macedonia" 6) ("Czechia" 5) ("Ukraine" 4) ("Spain" 3) ("Greece" 2) ("France" 1)))
+("Denmark" (("Azerbaijan" 12) ("Portugal" 10) ("Andorra" 8) ("Belarus" 7) ("Spain" 6) ("Ukraine" 5) ("Belgium" 4) ("Czechia" 3) ("Italy" 2) ("Turkey" 1)))
+("Slovakia" (("Turkey" 12) ("Serbia" 10) ("Montenegro" 8) ("Italy" 7) ("Armenia" 6) ("Bulgaria" 5) ("Romania" 4) ("Andorra" 3) ("Belarus" 2) ("Kosovo" 1)))
+("Lithuania" (("Georgia" 12) ("Russia" 10) ("Hungary" 8) ("Portugal" 7) ("Armenia" 6) ("Finland" 5) ("Turkey" 4) ("Germany" 3) ("France" 2) ("Montenegro" 1)))
+("Turkey" (("Belarus" 12) ("Austria" 10) ("Andorra" 8) ("Cyprus" 7) ("Bulgaria" 6) ("Netherlands" 5) ("Denmark" 4) ("Kazakhstan" 3) ("Czechia" 2) ("Latvia" 1)))
+("Finland" (("Ireland" 12) ("Belarus" 10) ("Hungary" 8) ("Armenia" 7) ("Moldova" 6) ("Sweden" 5) ("Estonia" 4) ("Kazakhstan" 3) ("Portugal" 2) ("Malta" 1)))
+("Greece" (("Croatia" 12) ("Ireland" 10) ("Bosnia" 8) ("Malta" 7) ("Kosovo" 6) ("Albania" 5) ("San Marino" 4) ("Switzerland" 3) ("United Kingdom" 2) ("Serbia" 1)))
+("Czechia" (("Germany" 12) ("Italy" 10) ("Sweden" 8) ("Albania" 7) ("Estonia" 6) ("Montenegro" 5) ("Turkey" 4) ("Portugal" 3) ("Greece" 2) ("Moldova" 1)))
+("United Kingdom" (("Croatia" 12) ("Lithuania" 10) ("Moldova" 8) ("Armenia" 7) ("Georgia" 6) ("Sweden" 5) ("Slovakia" 4) ("Kazakhstan" 3) ("Finland" 2) ("Ireland" 1)))
+("Moldova" (("Estonia" 12) ("Romania" 10) ("Finland" 8) ("Montenegro" 7) ("Luxembourg" 6) ("Malta" 5) ("Liechtenstein" 4) ("Denmark" 3) ("Andorra" 2) ("Switzerland" 1)))
+("Slovenia" (("Albania" 12) ("Croatia" 10) ("Italy" 8) ("Romania" 7) ("Estonia" 6) ("Spain" 5) ("Monaco" 4) ("France" 3) ("Czechia" 2) ("Portugal" 1)))))
+;end of input
+
+
+
+(define (search list elem)
+  (if (null? list)
+      #f
+      (if(equal? (caar list) elem)
+         #t
+         (search (cdr list) elem)
+       ) )
+  )
+
+(define (update elem results empty)
+  (if (null? results)
+      empty
+      (if(equal? (caar results) (car elem))
+         (append (update elem (cdr results) empty ) (list (list (car elem) (+ (cadar results) (cadr elem)))))
+         (append (update elem (cdr results) empty ) (list (car results)))
+       ) )
+  )
+
+(define (total-vote country results)
+  (if (null? country)
+      results
+      (if(search results (caar country))
+         (total-vote (cdr country) (update (car country) results '()))
+         (total-vote (cdr country) (append results (list(car country))))
+         )
+      )
+  )
+
+(define (total-votes list results)
+  (if (null? list)
+      results
+      (total-votes (cdr list) (total-vote (cadar list) results ))
+      )
+  )
+
+(define (give-position i x numbered-list)
+  (let ([lst (sort x #:key cadr >)])
+    (if (null? lst)
+      numbered-list
+      (append (list(list i (caar lst) (cadar lst) )) (append (give-position (+ i 1) (cdr lst) numbered-list )))
+      )
+    )
+  )
+
+(define (input-check input-list empty-list)
+  (if (null? input-list)
+      #f
+      (if (member (caar input-list) empty-list)
+          #t
+          (if(input-country-check (car input-list))
+             #t
+             (input-check (cdr input-list) (append empty-list (list(caar input-list))))
+             )
+          )
+      )
+  )
+
+(define (input-country-check input-list)
+  (cond
+    [(not(= 11 (count string? (flatten input-list)))) #t]
+    [(check-duplicates (flatten input-list)) #t]
+    [(not(= 10 (count integer? (flatten input-list)))) #t]
+    [(not(subset? '(1 2 3 4 5 6 7 8 10 12) (flatten input-list))) #t]
+    [else #f])
+  )
+
+(define (display-results input-list)
+  (if(input-check input-list '())
+     (println ''(("Country1" (("Country2" 12) ("Country3" 10) ("Country4" 8) ("Country5" 7) ("Country6" 6) ("Country7" 5) ("Country8" 4) ("Country9" 3) ("Country10" 2) ("Country11" 1)))
+              ("Country2" (("Country1" 12) ("Country3" 10) ("Country4" 8) ("Country5" 7) ("Country6" 6) ("Country7" 5) ("Country8" 4) ("Country9" 3) ("Country10" 2) ("Country11" 1)))
+              .......) (current-output-port) 1)
+     (displayln (give-position 1 (total-votes input-list '()) '()))
+     )
+  )
+
+(define (display-top top input-list)
+  (if(input-check input-list '())
+     (println ''(("Country1" (("Country2" 12) ("Country3" 10) ("Country4" 8) ("Country5" 7) ("Country6" 6) ("Country7" 5) ("Country8" 4) ("Country9" 3) ("Country10" 2) ("Country11" 1)))
+              ("Country2" (("Country1" 12) ("Country3" 10) ("Country4" 8) ("Country5" 7) ("Country6" 6) ("Country7" 5) ("Country8" 4) ("Country9" 3) ("Country10" 2) ("Country11" 1)))
+              .......) (current-output-port) 1)
+     (displayln (take (give-position 1 (total-votes input-list '()) '()) top))
+     )
+  )
+
+(display-top 5 input)
+(display-results input)
